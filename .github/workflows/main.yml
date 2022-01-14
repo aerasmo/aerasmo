@@ -1,32 +1,34 @@
 name: Metrics
 on:
-  # Schedule updates (each hour)
-  schedule: [{cron: "0 * * * *"}]
-  # Lines below let you run workflow manually and on each commit
+  schedule:
+    - cron: "0 16 * * *"
+  push:
+    branches:
+      - master
+      - main
   workflow_dispatch:
-  push: {branches: ["master", "main"]}
 jobs:
-  github-metrics:
+  github-metrics-personal:
     runs-on: ubuntu-latest
     steps:
-      - uses: lowlighter/metrics@latest
-        with:
-          # Your GitHub token
-          # The following scopes are required:
-          #  - public_access (default scope)
-          # The following additional scopes may be required:
-          #  - read:org  (for organization related metrics)
-          #  - read:user (for user related data)
-          #  - repo      (optional, if you want to include private repositories)
-          token: ${{ secrets.METRICS_TOKEN }}
 
-          # Options
-          user: aerasmo
-          template: classic
-          base: header, activity, community, repositories, metadata
-          commits_authoring: 
-          config_display: columns
-          config_padding: 0, 8 + 12%
-          config_timezone: Asia/Manila
+      - name: Metrics Left
+        if: ${{ success() || failure() }}
+        uses: lowlighter/metrics@latest
+        with:
+          filename: metrics.svg
+          token: ${{ secrets.METRICS_TOKEN }}
+          base: header
           plugin_isocalendar: yes
-          plugin_isocalendar_duration: full-year
+          plugin_languages: yes
+          plugin_languages_ignored: html, css, 
+          plugin_languages_skipped: lowlighter
+          plugin_languages_details: lines, percentage
+          plugin_languages_sections: most-used, recently-used
+          plugin_languages_indepth: yes
+          plugin_languages_limit: 5
+          plugin_topics: yes
+          plugin_topics_limit: 0
+          plugin_topics_mode: mastered
+          config_order: base.header, isocalendar, languages, notable, discussions, topics
+          output_action: pull-request
