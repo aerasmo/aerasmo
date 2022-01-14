@@ -1,1 +1,1 @@
-![Metrics](https://github.com/aerasmo/aerasmo/blob/main/github-metrics.svg)
+![Metrics](https://github.com/aerasmo/aerasmo/blob/main/metrics.svg)
