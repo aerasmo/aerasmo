@@ -1,1 +1,1 @@
-<img src="https://metrics.lecoq.io/aerasmo?template=classic&commits.authoring=&isocalendar=1&isocalendar.duration=half-year&config.timezone=Asia%2FManila&config.display=columns&config.padding=0%2C%208%20%2B%2010%25">
+<img src="https://github.com/aerasmo/aerasmo/blob/main/github-metrics.svg" alt="Metrics" width="100%">
