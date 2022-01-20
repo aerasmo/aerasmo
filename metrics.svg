@@ -599,8 +599,8 @@
                             <div class="label" title="Cascading Style Sheets (CSS) is a language used most often to style and improve upon the appearance of views.">css</div>
                             <div class="label" title="Node.js is a tool for executing JavaScript in a variety of environments.">node.js</div>
                             <div class="label" title="Bootstrap is an HTML, CSS, and JavaScript framework.">bootstrap</div>
-                            <div class="label" title="SQL is a standard language for storing, retrieving and manipulating data in databases.">sql</div>
                             <div class="label" title="C# (&amp;quot;C sharp&amp;quot;) is an object-oriented and type-safe programming language.">c#</div>
+                            <div class="label" title="SQL is a standard language for storing, retrieving and manipulating data in databases.">sql</div>
                             <div class="label" title="PHP is a popular general-purpose scripting language that works particularly well for server-side web development.">php</div>
                             <div class="label" title="Django is a web application framework for Python.">django</div>
                             <div class="label" title="Flask is a web framework for Python based on the Werkzeug toolkit.">flask</div>
@@ -1241,7 +1241,7 @@
             </section>
             <footer>
                 <span>These metrics include private contributions</span>
-                <span>Last updated 20 Jan 2022, 14:18:39 (timezone Asia/Manila) with lowlighter/metrics@3.18.0-beta</span>
+                <span>Last updated 20 Jan 2022, 15:15:29 (timezone Asia/Manila) with lowlighter/metrics@3.18.0-beta</span>
             </footer>
         </div>
         <div xmlns="http://www.w3.org/1999/xhtml" id="metrics-end"></div>
